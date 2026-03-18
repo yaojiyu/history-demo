@@ -1,0 +1,124 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+header {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.timeline-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 1rem 0;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.timeline {
+    display: inline-block;
+}
+
+.dynasty {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: #e9ecef;
+    color: #495057;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.dynasty:hover {
+    background-color: #dee2e6;
+}
+
+.dynasty.active {
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+}
+
+.content-container {
+    margin-top: 2rem;
+}
+
+.content-display {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.content-display.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.content-display h2 {
+    margin-top: 0;
+    color: #0056b3;
+}
+
+.content-display p {
+    margin: 0.5rem 0;
+}
+
+#read-aloud-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#read-aloud-btn:hover {
+    background-color: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .dynasty {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .content-display {
+        padding: 1.5rem;
+    }
+}
